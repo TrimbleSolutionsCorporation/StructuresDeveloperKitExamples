@@ -1,0 +1,9 @@
+UserApp/packages/**
+UserApp/UserApp_resources/Debug/**
+UserApp/UserApp_resources/Release/**
+UserApp/Debug/**
+UserApp/Release/**
+*.opensdf
+**/*.sdf
+**/*.suo
+*.vcxproj.user

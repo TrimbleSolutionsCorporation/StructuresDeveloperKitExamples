@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{835ed65d-7ddd-4b88-952f-1148b937495b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2648a31b-5ac9-4134-bb9e-9b3d024134cd}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{7c6e067f-1306-4bf5-8f45-878f0bac306d}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\bitmaps">
+      <UniqueIdentifier>{75087ba7-ef0e-4bd7-ac6d-5d2ba65068a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserApp_resources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="userapp_resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bitmaps\jnt_pict_uj13.bmp">
+      <Filter>Resource Files\bitmaps</Filter>
+    </None>
+    <None Include="bitmaps\jnt_wpic_uj13.bmp">
+      <Filter>Resource Files\bitmaps</Filter>
+    </None>
+    <None Include="bitmaps\xsu_detail_45_bolts.bmp">
+      <Filter>Resource Files\bitmaps</Filter>
+    </None>
+    <None Include="bitmaps\xsu_detail_45_plate.bmp">
+      <Filter>Resource Files\bitmaps</Filter>
+    </None>
+    <None Include="bitmaps\xsu_detail_45_stiffeners.bmp">
+      <Filter>Resource Files\bitmaps</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
