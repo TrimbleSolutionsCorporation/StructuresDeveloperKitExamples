@@ -125,8 +125,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\..\applications\user\application.inp" />
-    <None Include="..\..\applications\user\user_macros.inp" />
+    <None Include="INP\application.inp" />
+    <None Include="INP\user_macros.inp" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

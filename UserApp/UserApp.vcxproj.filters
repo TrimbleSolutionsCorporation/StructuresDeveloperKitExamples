@@ -13,26 +13,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Object Include="..\lib\jointmain.obj">
-      <Filter>bin</Filter>
-    </Object>
-    <Object Include="..\lib\xcdummy.obj">
-      <Filter>bin</Filter>
-    </Object>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="..\lib\ts_library.lib">
-      <Filter>bin</Filter>
-    </Library>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\applications\user\application.inp">
-      <Filter>INP</Filter>
-    </None>
-    <None Include="..\..\applications\user\user_macros.inp">
-      <Filter>INP</Filter>
-    </None>
     <None Include="packages.config" />
+    <None Include="INP\application.inp">
+      <Filter>INP</Filter>
+    </None>
+    <None Include="INP\user_macros.inp">
+      <Filter>INP</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="about_dialog.c">
