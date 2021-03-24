@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  
+  <PropertyGroup>
+    <Authors>Trimble Solutions Corporation</Authors>
+    <PackageProjectUrl>http://tekla.com</PackageProjectUrl>
+    <Copyright>Copyright © 1992-$([System.DateTime]::Now.ToString("yyyy")) Trimble Solutions Corporation and its licensors. All rights reserved.</Copyright>
+  </PropertyGroup>
+  
+    <!-- Basic settings -->
+    <PropertyGroup>
+        <!-- TSVersion is used for specifying folders. Change when branching. -->
+        <TSVersion              Condition="'$(TSVersion)'==''">Work</TSVersion>
+        <!-- TSVersionNumber is used for specifying the API version numbers. Change when branching. -->
+        <TSVersionNumber        Condition="'$(TSVersionNumber)'==''">99.1</TSVersionNumber>
+    </PropertyGroup>
+    
+
+    
+    <!-- Defaults for user settings -->
+    <PropertyGroup>
+       <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+       <Configuration Condition="'$(Configuration)'==''">Debug</Configuration>
+       <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <ObjDir>$(MSBuildThisFileDirectory)ObjDrop\$(Configuration)\$(Platform)\</ObjDir>
+        <OutDir>$(MSBuildThisFileDirectory)BuildDrop\applications\$(MSBuildProjectName)\</OutDir>
+        <OutDir Condition="'$(UserBINDir)'!=''">$(UserBINDir)\applications\$(MSBuildProjectName)\</OutDir>
+        <IntDir>$(ObjDir)$(MSBuildProjectName)\</IntDir>
+        <NugetPackageFolder>$(MSBuildThisFileDirectory)Packages</NugetPackageFolder>
+        <BuildPackageFolder>$(MSBuildThisFileDirectory)Build</BuildPackageFolder>
+        <BuildToolsFolder>$(MSBuildThisFileDirectory)tools</BuildToolsFolder>
+       <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)ObjDrop\NugetGenStuff\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+       <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+       <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    </PropertyGroup>
+        
+    <!-- The C++ compiler version for all projects -mrli10/2013 -->
+    <PropertyGroup Label="Configuration">
+        <PlatformToolset>v142</PlatformToolset>
+        <PlatformToolset Condition="'$(OverridePlatformToolSet)'!='false'">$(PlatformToolset)</PlatformToolset>
+        <LinkIncremental>true</LinkIncremental>
+    </PropertyGroup>
+    
+  
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalOptions>-w34063 -w34189 -w34206 -w34327 -w34701 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Wv:18 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization Condition="'$(Configuration)'==''">Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4701;4477;4474</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <StackReserveSize>2097152</StackReserveSize>
+      <StackReserveSize Condition="'$(Platform)'=='x64'">8194304</StackReserveSize>
+      <AdditionalDependencies>Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrtd.lib;libcd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine Condition="'$(Platform)'=='Win32'">MachineX86</TargetMachine>
+      <TargetMachine Condition="'$(Platform)'=='x64'">MachineX64</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  
+    <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>Iphlpapi.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

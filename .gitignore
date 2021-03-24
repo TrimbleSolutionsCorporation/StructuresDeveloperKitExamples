@@ -7,3 +7,10 @@ UserApp/Release/**
 **/*.sdf
 **/*.suo
 *.vcxproj.user
+ObjDrop
+BuildDrop
+/packages/
+/.vs/
+/UserApp_resources/x64/Debug
+/UserApp2019i/x64/Debug/
+/UserApp2021/x64/Debug/
