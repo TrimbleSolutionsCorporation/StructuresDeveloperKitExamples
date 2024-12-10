@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEP Version="2.0">
+  <Product Id="UserAppComponent" UpgradeCode="9C192914-1D85-443B-A8E2-E3BA49988786" Version="3.0" Language="1033" 
+    Name="UserAppComponent System Components" Manufacturer="Trimble Solutions Corporation"  Description= "Extension manifest to deploy a system component"
+    IconPath="%TEPDEFINITIONFILEFOLDER%\..\..\build\Icon.png" Type="Extension">
+    <TeklaVersions>
+      <TeklaVersion Name="2024.0"/>
+      <MinTeklaVersion Name="2024.0"/>
+      <MaxTeklaVersion Name="2099.1"/>
+    </TeklaVersions>
+  </Product>
+   
+  <SourcePathVariables>
+    <SourcePathVariable Id="InstallerFolder" Value="%TEPDEFINITIONFILEFOLDER%\..\..\BuildDrop\UserApp"/>
+    </SourcePathVariables>
+
+  <TargetPathVariables>
+    <PathVariable Id="ExtensionsDir" Value="%commonEnvFolder%\extensions\applications"/>
+    <PathVariable Id="BinariesTargetDirectory" Value="%ExtensionsDir%\UserApp"/>
+  </TargetPathVariables>
+
+  <Component Id="UserAppComponent" Guid="C4F12282-EB54-47C6-815A-20791F3A1645">
+    <File Id="PluginFiles" Source="%InstallerFolder%\UserApp2024.*" Target="%BinariesTargetDirectory%" />
+    <File Id="PluginFiles2" Source="%InstallerFolder%\UserApp_resources.*" Target="%BinariesTargetDirectory%" />
+  </Component>
+
+  <Feature Id="TheExtensionFeature" Title="ExtensionFeature">
+    <ComponentRef ReferenceId="UserAppComponent" />
+  </Feature>
+
+ </TEP>

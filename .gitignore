@@ -14,3 +14,5 @@ BuildDrop
 /UserApp_resources/x64/Debug
 /UserApp2019i/x64/Debug/
 /UserApp2021/x64/Debug/
+tsep-*.log
+*.tsep
