@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5711FE96-BC50-4F80-AF37-802B08A2B489}</ProjectGuid>
-    <RootNamespace>UserApp2024</RootNamespace>
+    <ProjectGuid>{816DF024-986F-411D-B285-D121BFD43085}</ProjectGuid>
+    <RootNamespace>UserApp2021</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -45,12 +45,12 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\StructuresDevKit.2024.0.28\build\native\StructuresDevKit.targets" Condition="Exists('..\packages\StructuresDevKit.2024.0.28\build\native\StructuresDevKit.targets')" />
+    <Import Project="..\packages\StructuresDevKit.2022.0.0\build\native\StructuresDevKit.targets" Condition="Exists('..\packages\StructuresDevKit.2022.0.0\build\native\StructuresDevKit.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\StructuresDevKit.2024.0.28\build\native\StructuresDevKit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StructuresDevKit.2024.0.28\build\native\StructuresDevKit.targets'))" />
+    <Error Condition="!Exists('..\packages\StructuresDevKit.2022.0.0\build\native\StructuresDevKit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\StructuresDevKit.2022.0.0\build\native\StructuresDevKit.targets'))" />
   </Target>
 </Project>
