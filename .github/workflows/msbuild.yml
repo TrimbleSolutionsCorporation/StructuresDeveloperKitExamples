@@ -13,7 +13,7 @@ env:
 
 jobs:
   build:
-    runs-on: windows-sandbox
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v5
