@@ -12,9 +12,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3F7E898B-ED4E-4C7A-89D9-D199655EAC6C}</ProjectGuid>
-    <RootNamespace>UserApp2024</RootNamespace>
+    <RootNamespace>UserApp2025</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>

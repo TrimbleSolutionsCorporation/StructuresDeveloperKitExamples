@@ -14,7 +14,6 @@
     <ProjectGuid>{816DF024-986F-411D-B285-D121BFD43085}</ProjectGuid>
     <RootNamespace>UserApp2021</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
