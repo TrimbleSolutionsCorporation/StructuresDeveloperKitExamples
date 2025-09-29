@@ -20,6 +20,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserApp2022", "UserApp2022\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserApp2023", "UserApp2023\UserApp2023.vcxproj", "{2BBFC722-8F82-497B-828F-6980540FFBD5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UserApp2025", "UserApp2025\UserApp2025.vcxproj", "{3F7E898B-ED4E-4C7A-89D9-D199655EAC6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -50,6 +52,10 @@ Global
 		{2BBFC722-8F82-497B-828F-6980540FFBD5}.Debug|x64.Build.0 = Debug|x64
 		{2BBFC722-8F82-497B-828F-6980540FFBD5}.Release|x64.ActiveCfg = Release|x64
 		{2BBFC722-8F82-497B-828F-6980540FFBD5}.Release|x64.Build.0 = Release|x64
+		{3F7E898B-ED4E-4C7A-89D9-D199655EAC6C}.Debug|x64.ActiveCfg = Debug|x64
+		{3F7E898B-ED4E-4C7A-89D9-D199655EAC6C}.Debug|x64.Build.0 = Debug|x64
+		{3F7E898B-ED4E-4C7A-89D9-D199655EAC6C}.Release|x64.ActiveCfg = Release|x64
+		{3F7E898B-ED4E-4C7A-89D9-D199655EAC6C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
