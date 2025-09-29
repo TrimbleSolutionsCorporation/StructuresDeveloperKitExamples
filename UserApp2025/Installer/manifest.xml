@@ -4,8 +4,8 @@
     Name="UserAppComponent System Components" Manufacturer="Trimble Solutions Corporation"  Description= "Extension manifest to deploy a system component"
     IconPath="%TEPDEFINITIONFILEFOLDER%\..\..\build\Icon.png" Type="Extension">
     <TeklaVersions>
-      <TeklaVersion Name="2024.0"/>
-      <MinTeklaVersion Name="2024.0"/>
+      <TeklaVersion Name="2025.0"/>
+      <MinTeklaVersion Name="2025.0"/>
       <MaxTeklaVersion Name="2099.1"/>
     </TeklaVersions>
   </Product>
@@ -20,7 +20,7 @@
   </TargetPathVariables>
 
   <Component Id="UserAppComponent" Guid="C4F12282-EB54-47C6-815A-20791F3A1645">
-    <File Id="PluginFiles" Source="%InstallerFolder%\UserApp2024.*" Target="%BinariesTargetDirectory%" />
+    <File Id="PluginFiles" Source="%InstallerFolder%\UserApp2025.*" Target="%BinariesTargetDirectory%" />
     <File Id="PluginFiles2" Source="%InstallerFolder%\UserApp_resources.*" Target="%BinariesTargetDirectory%" />
   </Component>
 
